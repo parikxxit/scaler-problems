@@ -15,8 +15,7 @@ int solve(vector<vector<int> > &A, int B) {
     int col = A[0].size()-1;
     int sr = 0, sc = col;
     while (sr <= row && sc >= 0) {
-        cout << sr << " " << sc << endl;
-        if(A[sr][sc] == B) return (sr + sc*1009);
+        if(A[sr][sc] == B) return ((sr+1)*1009 + (sc+1));
         else if(A[sr][sc] < B) sr++; 
         else sc--;
     }
